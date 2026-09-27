@@ -1,52 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício - Linhamento em Tabelas</title>
+    <title>Alinhamento em Tabelas</title>
     <style>
         body{
-            font-family:Arial, Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        table{
+        table{ 
             width: 400px;
             height: 400px;
-
             border-collapse: collapse;
         }
-        td{
-            border: 1px solid black;
-            padding: 8px;
-
-            text-align: center;
-
-            vertical-align: middle;
+        td{ 
+            border: 2px solid black;
+            padding: 10px; 
+            vertical-align: top;
         }
+        .esqueda{ text-align: left;}
+        .direita{ text-align: right;}
+        .centro{ text-align: center;}
+        .top{ vertical-align: top;}
+        .baixo{ vertical-align: bottom;}
         .numero{
             text-align: right;
-
-            text-align: top;
+           vertical-align: top;
         }
     </style>
 </head>
 <body>
-    <h1>Exercício - Trabalhando com alinhamento</h1>
+    <h1>Exercicio - Trabalando em Alinhamento</h1>
     <table>
+        <!--linha 1-->
         <tr>
-           <td>A1 <br>(esquedo)</td> 
-           <td>B1 <br> (padrão centro)</td>
-           <td>C1 <br>(direto) </td>
+            <td class="esquerda">A1 <br>(esquerda)</td>
+            <td class="centro">B1 <br>(padrão centro)</td>
+            <td class="direita">C1 <br>(direita)</td>
+        </tr> 
+        <!--Linha 2-->
+        <tr>
+            <td class="top">A2 <br>(topo)</td>
+            <td class="centro">B2 <br>(padrão centro)</td>
+            <td class="baixo">C2 <br>(baixo)</td> 
         </tr>
-        <tr class="linha">
-            <td>A2 <br>(topo)</td>
-            <td>B2 <br> padrão</td>
-            <td class="numero">C3 <br>(baixo)</td>
+        <!--Linha 3-->
+        <tr>
+            <td class="top">A3 <br>(topo)</td>
+            <td class="baixo">B3 <br>(baixo)</td>
+            <td class="centro">C3 <br>(padrão)</td>
         </tr>
-        <td>A4 <br></td>
-        <td class="dado">B4 <br></td>
-        <td>C4 <br></td>
-
+        <!--Linha 4-->
+        <tr>
+            <td class="esqueda">A4</td>
+            <td class="numero">1000 <br>(número á direita)</td>
+            <td class="centro">C4</td>
+        </tr>
     </table>
 </body>
 </html>
